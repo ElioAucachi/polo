@@ -1,0 +1,39 @@
+INSERT Fabricante (IdFabricante, Fabricante)
+VALUES (1, 'SAMSUNG'),
+       (2, 'MOTOROLA'),
+       (3, 'NOKIA'),
+       (4, 'QUALCOMM').
+       (5,'SONY');
+       
+INSERT Microprocesador(IdMicroprocesador, IdFabricante, Lanzamiento, Nucleos, Velocidad)
+VALUES (8895, 1, '2017/3/29', 8, 2.3),
+       (660, 4, '2017/5/09', 8, 2,2),
+       (855, 4, '2018/12/05', 8, 2.84);
+
+INSERT Camara(IdCamara, IdFabricante, Megapixeles, Apertura)
+VALUES (IMX320, 5, 12, 5.0),
+       (IMX363, 5, 12, 7.0),
+       (IMX400, 5, 19, 9.0);
+       
+INSERT SistemaOperativo(IdSO, nombre, version, lanzamiento)
+VALUES (11, 'Android Nougat', 7.0, '2016/8/22'),
+       (22, 'Android Oreo', 8.1, '2017/12/15'),
+       (33, 'Android Pie´, 9.0, '2018/8/6');
+
+DELETE FROM FABRICANTE 
+WHERE IdFabricante = 2;
+
+INSERT Modelo(IdModelo, IdFabricante, IdCamara, IdMIcroprocesador, IdSO, Modelo, rom, ram, peso, altura, capacidadSD, ancho, profundidad)
+VALUES (12, 1, IXM320, 8895, 11, 'SAMSUNG S8+', 128, 6, 173, 160, 1024, 73, 8),
+       (13, 3, IXM363, 660, 22, 'NOKIA 7 PLUS', 64, 4, 183, 158, 256, 76, 8),
+       (14, 5, IXM400, 855, 33, 'SONY XZ3', 64, 6, 193, 158, 1024, 73, 10);
+       
+UPDATE Modelo
+SET 11 = 33,
+    22 = 33,
+    
+WHERE IdFabricante = 1 and 
+      IdFabicante = 3;
+       
+       
+               
